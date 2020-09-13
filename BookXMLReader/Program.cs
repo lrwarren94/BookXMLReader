@@ -6,7 +6,10 @@ namespace BookXMLReader
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            ConsoleInterface consoleInterface = new ConsoleInterface();
+            consoleInterface.Start();
+
+            Console.ReadKey();
         }
     }
 }
