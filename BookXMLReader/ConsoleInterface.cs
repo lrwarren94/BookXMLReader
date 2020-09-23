@@ -71,7 +71,7 @@ namespace BookXMLReader
             menuState = "begin";
             subMenuState = "";
             queryData = new QueryData();
-            using (FileStream fs = new FileStream("Books.xml", FileMode.Open))
+            using (FileStream fs = new FileStream(@"Books.xml", FileMode.Open))
             {
                 XmlSerializer xs = new XmlSerializer(typeof(catalog));
                 catalog books = (catalog)xs.Deserialize(fs);
@@ -414,7 +414,7 @@ namespace BookXMLReader
 
         private void DisplayMainMenu()
         {
-            Console.Write("Welcome to BookQuery, International Paper's primary "
+            Console.Write("Welcome to BookQuery, Lindsey's primary "
                         + "internal book-searching system. Please select your "
                         + "desired paramaters below, and when you're ready to "
                         + "search, select the Execute Query option.\n\n");
